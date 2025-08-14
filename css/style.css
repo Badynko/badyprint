@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 95vh;
+  font-family: sans-serif;
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header {
+  background: #f7f7f7;
+  padding: 0;
+  display: flex;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.header-web {
+  display: flex;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  gap: 5px;
+}
+
+.left {
+  background: #f7f7f7;
+  padding: 1.5em 0 3em 0;
+  flex: 1 1 100px;
+  margin-left: 1rem;
+
+  border-radius: 1rem;
+}
+
+main {
+  background: #f7f7f7;
+  padding: 3em 0 3em 0;
+  flex: 5 5 150px;
+
+  border-radius: 1rem;
+}
+
+.right {
+  background: #f7f7f7;
+  padding: 1.5em 0 3em 0;
+  margin-right: 1rem;
+
+  border-radius: 1rem;
+  flex: 1 1 150px;
+}
+
+footer {
+  background: rgb(0, 0, 0);
+  padding: 1em 0 1em 0;
+}
+
+/* CONTENT */
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin-left: 1rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.menu a:link {
+  text-decoration: none;
+  padding-right: 3rem;
+  margin-right: 0;
+
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: rgb(86, 86, 86);
+}
+
+.menu a:hover {
+  font-weight: 800;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.left-title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: rgb(41, 41, 41);
+  border-top: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  font-family: "Cinzel", serif;
+}
+
+.right-title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: rgb(41, 41, 41);
+  border-top: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  font-family: "Cinzel", serif;
+}
+
+.termin-list {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 1rem;
+}
+
+.termin-list li {
+  padding-top: 1rem;
+  color: #282828;
+}
+
+.termin-list a:link {
+  text-decoration: none;
+  color: #282828;
+}
+
+.termin-list a:visited {
+  text-decoration: none;
+  color: #282828;
+}
+
+.date-list a:link {
+  text-decoration: none;
+  color: #282828;
+}
+
+.date-list a:visited {
+  text-decoration: none;
+  color: #282828;
+}
+
+.left-sub {
+  font-family: "Cinzel", serif;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #f7f7f7;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+}
+
+.left-sub:active,
+.left-sub:hover {
+  background: rgb(0, 0, 0);
+}
+.post {
+  border-radius: 0.5rem;
+  background-color: #f7f7f7;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 1rem;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.post h4 {
+  color: #000;
+  padding-top: 1rem;
+  font-family: "Gupter", serif;
+  text-transform: uppercase;
+}
+
+.post p {
+  color: #000;
+  font-size: 1rem;
+  text-align: left;
+
+  margin-top: 50px;
+  margin-left: 2rem;
+  width: 60%;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-content p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-family: "Gupter", serif;
+  font-weight: 600;
+  letter-spacing: 1.2;
+}
+
+.post-img {
+  width: 200px;
+  height: auto;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.social {
+  margin-right: 1rem;
+  display: flex;
+  flex: 1 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.contact-gmail {
+  margin-top: -10px;
+}
+
+.img-gmail {
+  margin-right: 1rem;
+}
+
+.prices {
+  color: #000;
+  list-style: none;
+}
+
+.prices {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f7f7f7;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-family: "Cinzel", serif;
+}
+
+.price {
+  margin-top: 1.5rem;
+}
+
+/* BUTTON */
+.scroll-button {
+  /* position should be fixed so that it sticks to the bottom */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  /* removing extra syles outline and border */
+  outline: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 100%; /* making it rounded */
+
+  /* Making it's content center */
+  display: grid;
+  place-items: center;
+
+  /* Inital property so that user won't be able to see the button when he visit the page */
+  pointer-events: none; /* any event won't work */
+  opacity: 0; /* hiding button */
+  transition: opacity 500ms ease; /* animation */
+  -webkit-tap-highlight-color: transparent; /* removing tap hightlight */
+}
+
+/* Setting the Image dimensions */
+.scroll-button > img {
+  width: 50px;
+  height: 50px;
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+.order-button {
+  background-color: rgb(0, 0, 0);
+
+  font-size: 1.3rem;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.order-button a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.order-button a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.show-btn {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}
+@media all and (max-width: 550px) {
+  body {
+    max-width: 100%;
+    gap: 0;
+  }
+
+  .header-web {
+    display: none;
+  }
+
+  .header-mobile {
+    display: inline-block;
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  header {
+    flex-direction: column;
+    flex: 1 1;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  header img {
+    overflow: hidden;
+  }
+
+  .img-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .left {
+    margin-left: 0;
+    width: 100%;
+    order: 2;
+    padding-top: 0.5rem;
+  }
+
+  .post {
+    margin-left: 0;
+    margin-right: 0;
+    flex: 1 1;
+    padding-right: 1rem;
+  }
+
+  .post h4 {
+    color: rgb(0, 0, 0);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2rem;
+  }
+
+  .post-content p {
+    letter-spacing: 0.02rem;
+    max-width: 250px;
+  }
+
+  .right {
+    flex: 1 1 100px;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  footer {
+    width: 80%;
+  }
+
+  nav {
+    font-size: 1rem;
+  }
+
+  .menu a:link {
+    padding: 0;
+    margin-right: 1rem;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .main {
+    order: 0;
+    justify-content: center;
+  }
+
+  .prices li:first-child {
+    padding-top: 0.5rem;
+  }
+
+  .prices li:last-child {
+    padding-bottom: 1rem;
+  }
+
+  .img-gmail {
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+
+  .container-main:first-child {
+    margin-top: 1rem;
+  }
+
+  .footer {
+    width: 100%;
+    font-family: "Cinzel", serif;
+    font-size: 0.7rem;
+  }
+}
+
+.heart {
+  color: #fff;
+}
+
+#contact-gmail {
+  display: inline-block;
+}
+
+.img-flex {
+  justify-content: center;
+  align-content: space-around;
+}
+
+.post-content {
+  gap: 0;
+  overflow: hidden;
+}
