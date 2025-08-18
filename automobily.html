@@ -1,139 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BadyPrint</title>
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Google Fonts (zjednotené do jedného linku) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Gupter:wght@400;500;700&family=Inter:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cinzel+Decorative:wght@400;700;900&family=Gupter:wght@400;500;700&family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <img
-        class="header-web"
-        src="img/header2.png"
-        alt="logo"
-        width="100%"
-        height="auto"
-      />
+      <img class="header-web" src="img/header2.png" alt="logo BadyPrint" />
       <img
         class="header-mobile"
         src="img/header-mobile.png"
-        alt="logo"
-        width="100%"
-        height="auto"
+        alt="logo BadyPrint mobile"
       />
     </header>
+
     <div class="order-button blink_me">
       <p><a href="#contact-scroll">NAPÍŠ MI TERAZ HNEĎ - KLIK!</a></p>
     </div>
-    
-    
-      <div class="social">
-        <a href="#"
-          ><img src="img/fb.png" alt="FB" width="50px" height="auto"
-        /></a>
-        <a href="#"
-          ><img src="img/ig.png" alt="IG" width="50px" height="auto"
-        /></a>
-        <a href="#"
-          ><img src="img/tiktok.png" alt="tiktok" width="50px" height="auto"
-        /></a>
-      </div>
-    </aside>
+
+    <div class="social fixed-social">
+      <a href="#"><img src="img/fb.png" alt="Facebook" /></a>
+      <a href="#"><img src="img/ig.png" alt="Instagram" /></a>
+      <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+    </div>
+
+    <aside
+        class="sidebar left mobile-nav"
+        role="navigation"
+        aria-label="Hlavná navigácia"
+      >
+        <h1>Kategórie</h1>
+        <ul class="menu">
+          <li>
+            <a href="#" aria-current="page"
+              ><span class="icon">🏠</span
+              ><span class="label">Homepage</span></a
+            >
+          </li>
+          <li>
+            <a href="automobily.html"
+              ><span class="icon">🚗</span
+              ><span class="label">Automobily</span></a
+            >
+          </li>
+          <li>
+            <a href="#sluzby"
+              ><span class="icon">💡</span><span class="label">Lampy</span></a
+            >
+          </li>
+          <li>
+            <a href="#referencie"
+              ><span class="icon">🌀</span><span class="label">Fidgety</span></a
+            >
+          </li>
+          <li>
+            <a href="#blog"
+              ><span class="icon">🎲</span
+              ><span class="label">Postavičky</span></a
+            >
+          </li>
+          <li>
+            <a href="#kontakt"
+              ><span class="icon">🧍</span><span class="label">Hry</span></a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+
     <div class="main">
       <main>
         <section class="container-main">
-          
+          <article class="post">
+            <h4>Nová hračka</h4>
+            <div class="post-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint neque ea assumenda illo reprehenderit nostrum.
+              </p>
+              <div class="img-flex">
+                <img src="img/1.jpg" alt="3D tlač" class="post-img" />
+              </div>
+            </div>
+          </article>
+
+          <article class="post">
+            <h4>Aj toto je možné vytlačiť</h4>
+            <div class="post-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint neque ea assumenda illo reprehenderit nostrum.
+              </p>
+              <div class="img-flex">
+                <img src="img/2.jpg" alt="3D model" class="post-img" />
+              </div>
+            </div>
+          </article>
+
+          <article class="post">
+            <h4>Toto si potreboval</h4>
+            <div class="post-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint neque ea assumenda illo reprehenderit nostrum.
+              </p>
+              <div class="img-flex">
+                <img src="img/3.jpg" alt="Výsledok tlače" class="post-img" />
+              </div>
+            </div>
+          </article>
         </section>
       </main>
-      
-      <aside class="sidebar left" role="navigation" aria-label="Hlavná navigácia">
-    <h1>Kategórie</h1>
-    <ul class="menu">
-      <li><a href="#" aria-current="page"><span class="icon">🏠</span><span class="label">Homepage</span></a></li>
-      <li><a href="automobily.html"><span class="icon">🚗</span><span class="label">Automobily</span></a></li>
-      <li><a href="#sluzby"><span class="icon">💡</span><span class="label">Lampy</span></a></li>
-      <li><a href="#referencie"><span class="icon">🌀</span><span class="label">Fidgety</span></a></li>
-      <li><a href="#blog"><span class="icon">🎲</span><span class="label"></span><br>Postavičky</a></li>
-      <li><a href="#kontakt"><span class="icon">🧍</span><span class="label">Hry</span></a></li>
-    </ul>
-  </aside>
+
+      <aside
+        class="sidebar left main-nav"
+        role="navigation"
+        aria-label="Hlavná navigácia"
+      >
+        <h1>Kategórie</h1>
+        <ul class="menu">
+          <li>
+            <a href="#" aria-current="page"
+              ><span class="icon">🏠</span
+              ><span class="label">Homepage</span></a
+            >
+          </li>
+          <li>
+            <a href="automobily.html"
+              ><span class="icon">🚗</span
+              ><span class="label">Automobily</span></a
+            >
+          </li>
+          <li>
+            <a href="#sluzby"
+              ><span class="icon">💡</span><span class="label">Lampy</span></a
+            >
+          </li>
+          <li>
+            <a href="#referencie"
+              ><span class="icon">🌀</span><span class="label">Fidgety</span></a
+            >
+          </li>
+          <li>
+            <a href="#blog"
+              ><span class="icon">🎲</span
+              ><span class="label">Postavičky</span></a
+            >
+          </li>
+          <li>
+            <a href="#kontakt"
+              ><span class="icon">🧍</span><span class="label">Hry</span></a
+            >
+          </li>
+        </ul>
+      </aside>
     </div>
 
     <aside class="left" id="contact-scroll">
       <h3 class="left-title">Kontaktuj ma!</h3>
       <ul class="termin-list">
-
-        <li><a href="#"
-          ><img src="img/fb.png" alt="FB" width="50px" height="auto"
-        /></a></li>
-        <li><a href="#"
-          ><img src="img/ig.png" alt="IG" width="50px" height="auto"
-        /></a></li>
-        <li><a href="#"
-          ><img src="img/tiktok.png" alt="tiktok" width="50px" height="auto"
-        /></a></li>
+        <li>
+          <a href="#"
+            ><img src="img/fb.png" alt="Facebook" width="15px" height="15px"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="img/ig.png" alt="Instagram" width="15px" height="15px"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="img/tiktok.png" alt="TikTok" width="15px" height="15px"
+          /></a>
+        </li>
         <li>
           <img
             src="img/phone.png"
-            alt="phone"
-            width="30px"
+            alt="Telefón"
             class="img-gmail"
-          /><a href="tel:0903333888" id="contact-gmail phone"> 0903 888 666</a>
+            width="15px"
+            height="15px"
+          />
+          <a href="tel:0903333888">0903 888 666</a>
         </li>
         <li>
           <img
             src="img/gmail.png"
-            alt="gmail"
-            width="30px"
+            alt="Gmail"
             class="img-gmail"
-          /><a href="mailto: email@gmail.com" id="contact-gmail"
-            >surinalukas1991@gmail.com</a
-          >
+            width="15px"
+            height="15px"
+          />
+          <a href="mailto:email@gmail.com">surinalukas1991@gmail.com</a>
         </li>
       </ul>
+    </aside>
 
     <footer class="footer">
       <div class="social">
-        <a href="#"
-          ><img src="img/fb.png" alt="FB" width="50px" height="auto"
-        /></a>
-        <a href="#"
-          ><img src="img/ig.png" alt="IG" width="50px" height="auto"
-        /></a>
-        <a href="#"
-          ><img src="img/tiktok.png" alt="tiktok" width="50px" height="auto"
-        /></a>
+        <a href="#"><img src="img/fb.png" alt="Facebook" /></a>
+        <a href="#"><img src="img/ig.png" alt="Instagram" /></a>
+        <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
       </div>
       <p class="text-footer">BadyPrint @2025 created by Bady</p>
     </footer>
-    <button class="scroll-button">
+
+    <button class="scroll-button" aria-label="Scroll to top">
       <img
         src="https://cdn-icons-png.flaticon.com/512/892/892692.png"
-        alt="arrow-up"
+        alt="šípka hore"
       />
     </button>
+
     <script src="js/script.js"></script>
   </body>
 </html>
