@@ -52,32 +52,38 @@ header {
 /* MAIN LAYOUT */
 .main {
   display: flex;
-  flex: 1;
   gap: 5px;
+}
+
+.container-main {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 main {
   background: var(--panel);
   margin-top: 3px;
-  padding: 3em 0;
-  flex: 5 5 150px;
+  padding: 1em 0;
+  flex: 1 1 150px;
+  flex-wrap: wrap;
   border-radius: 1rem;
 }
 
 .left,
 .sidebar {
+  flex-basis: 20%;
   background: var(--panel);
   padding: 1.5em 0 0 0;
-  flex: 1 1 100px;
   border-radius: 1rem;
 }
 
 /* POSTS */
 .post {
+  display: inline-block;
   border-radius: 0.5rem;
   background-color: var(--panel);
-  margin: 0 100px;
-  padding: 1rem;
+  margin: 15px;
+  padding: 0;
   border: 1px solid var(--black);
 }
 
@@ -93,6 +99,8 @@ main {
   justify-content: space-between;
   gap: 1rem;
   overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .post p {
@@ -107,9 +115,9 @@ main {
 }
 
 .post-img {
-  width: 200px;
+  max-width: 150px;
   height: auto;
-  margin: 1rem;
+  margin: 0.1rem;
   border-radius: 1rem;
 }
 
@@ -177,6 +185,14 @@ main {
 
 .img-gmail {
   margin-right: 1rem;
+}
+
+.img-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 /* FOOTER */
@@ -290,8 +306,16 @@ footer {
     display: none;
   }
 
+  .container-main {
+    display: block;
+  }
+
+  .img-flex {
+    justify-content: center;
+  }
+
   .post {
-    margin: 0;
+    margin: 10px;
   }
   .post-img {
     width: 120px;
