@@ -505,4 +505,9 @@ footer {
   .lightbox-next:hover {
     opacity: 1;
   }
+
+  .post h4 {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
 }
