@@ -6,6 +6,9 @@ const closeBtn = document.querySelector(".lightbox-close");
 const prevBtn = document.querySelector(".lightbox-prev");
 const nextBtn = document.querySelector(".lightbox-next");
 const lightboxTitle = document.getElementById("lightbox-title");
+// Toggle mobilného menu
+const menuToggle = document.querySelector(".mobile-nav .menu-toggle");
+const mobileMenu = document.querySelector(".mobile-nav .menu");
 
 let currentIndex = 0;
 let imgArray = Array.from(images);
@@ -50,4 +53,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") {
     prevBtn.click();
   }
+});
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
 });
