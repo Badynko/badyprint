@@ -483,11 +483,11 @@ footer {
   }
 
   .lightbox-prev {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 
   .lightbox-next {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 
   .lightbox-prev:active {
