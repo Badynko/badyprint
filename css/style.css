@@ -56,8 +56,7 @@ header {
 }
 
 .container-main {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: block;
 }
 
 main {
@@ -80,6 +79,7 @@ main {
 /* POSTS */
 .post {
   display: inline-block;
+  min-width: 70%;
   border-radius: 0.5rem;
   background-color: var(--panel);
   margin: 15px;
@@ -88,30 +88,32 @@ main {
 }
 
 .post h4 {
-  color: var(--black);
+  color: darkblue;
+  font-size: 2rem;
   padding-top: 1rem;
   font-family: "Gupter", serif;
   text-transform: uppercase;
+
+  text-align: center;
 }
 
 .post-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  overflow: hidden;
+  display: inline-block;
+  text-align: center;
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
 .post p {
+  display: inline-block;
   color: var(--black);
   font-size: 0.9rem;
-  text-align: left;
-  margin: 1rem 2rem 0;
+  text-align: center;
   width: 60%;
-  font-family: "Gupter", serif;
+  font-family: sans-serif;
   font-weight: 600;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .post-img {
@@ -189,8 +191,8 @@ main {
 
 .img-flex {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
   margin-right: 5px;
   margin-bottom: 5px;
 }
@@ -344,7 +346,6 @@ footer {
 
 .tile img {
   width: auto;
-  height: 100%;
   display: block;
 }
 
@@ -375,9 +376,7 @@ footer {
 }
 
 .lightbox-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
 }
 
 .lightbox-content img {
@@ -387,17 +386,22 @@ footer {
 }
 
 .popis {
-  position: absolute;
-  bottom: 20px;
-  left: 100px;
   color: white;
   font-weight: bold;
+}
+
+#lightbox-title {
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .outline {
   color: #fff;
   text-shadow: #000 0px 0px 3px;
   -webkit-font-smoothing: antialiased;
+  margin-left: 10%;
 }
 
 /* PREVIOUS / NEXT BUTTONS */
@@ -440,6 +444,11 @@ footer {
   padding: 0.3rem 0.6rem;
 }
 
+.lightbox-content img {
+  height: 100%vh;
+  width: auto;
+}
+
 /* RESPONSIVE LIGHTBOX */
 @media (max-width: 550px) {
   .lightbox-prev {
@@ -451,5 +460,14 @@ footer {
   .lightbox-close {
     top: 10px;
     right: 10px;
+  }
+
+  .lightbox-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .first {
+    display: none;
   }
 }

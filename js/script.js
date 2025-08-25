@@ -1,48 +1,53 @@
-// SCROLL BUTTON
-const scrollButton = document.querySelector(".scroll-button");
-window.addEventListener("scroll", () => {
-  window.scrollY > 100
-    ? scrollButton.classList.add("show-btn")
-    : scrollButton.classList.remove("show-btn");
-});
-scrollButton.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// LIGHTBOX FUNCTIONALITY
-const tiles = document.querySelectorAll(".tile");
+const images = document.querySelectorAll(".post-img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = lightbox.querySelector("img");
-const closeBtn = lightbox.querySelector(".lightbox-close");
-const prevBtn = lightbox.querySelector(".lightbox-prev");
-const nextBtn = lightbox.querySelector(".lightbox-next");
+const lightboxCaption = document.getElementById("lightbox-caption");
+const closeBtn = document.querySelector(".lightbox-close");
+const prevBtn = document.querySelector(".lightbox-prev");
+const nextBtn = document.querySelector(".lightbox-next");
+const lightboxTitle = document.getElementById("lightbox-title");
 
-let currentImages = [];
 let currentIndex = 0;
+let imgArray = Array.from(images);
 
-tiles.forEach((tile) => {
-  tile.addEventListener("click", () => {
-    currentImages = tile.dataset.images.split(",");
-    currentIndex = 0;
-    lightboxImg.src = currentImages[currentIndex];
-    lightbox.classList.add("active");
+function openLightbox(index) {
+  const img = imgArray[index];
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+  lightboxCaption.textContent = img.dataset.caption || ""; // popis pod obrázkom
+  lightboxTitle.textContent = img.alt || ""; // nadpis nad obrázkom
+  currentIndex = index;
+}
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    openLightbox(index);
   });
 });
 
-closeBtn.addEventListener("click", () => lightbox.classList.remove("active"));
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
 
 prevBtn.addEventListener("click", () => {
-  currentIndex =
-    (currentIndex - 1 + currentImages.length) % currentImages.length;
-  lightboxImg.src = currentImages[currentIndex];
+  currentIndex = (currentIndex - 1 + imgArray.length) % imgArray.length;
+  openLightbox(currentIndex);
 });
 
 nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % currentImages.length;
-  lightboxImg.src = currentImages[currentIndex];
+  currentIndex = (currentIndex + 1) % imgArray.length;
+  openLightbox(currentIndex);
 });
 
-// Click outside image closes lightbox
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) lightbox.classList.remove("active");
+// zavretie lightboxu klávesou ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.style.display = "none";
+  }
+  if (e.key === "ArrowRight") {
+    nextBtn.click();
+  }
+  if (e.key === "ArrowLeft") {
+    prevBtn.click();
+  }
 });
