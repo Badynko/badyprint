@@ -395,6 +395,7 @@ footer {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  margin-bottom: 5px;
 }
 
 .outline {
@@ -441,6 +442,7 @@ footer {
   border-radius: 50%;
   border: rgb(255, 255, 255) 3px solid;
   padding: 0.3rem 0.6rem;
+  opacity: 0.8;
 }
 
 .lightbox-content img {
@@ -466,7 +468,7 @@ footer {
   }
 
   .lightbox-content img {
-    width: 100%;
+    width: 95%;
     height: auto;
   }
 }
@@ -478,5 +480,29 @@ footer {
   }
   .mobile-nav .menu.open {
     display: block;
+  }
+
+  .lightbox-prev {
+    opacity: 0.2;
+  }
+
+  .lightbox-next {
+    opacity: 0.2;
+  }
+
+  .lightbox-prev:active {
+    opacity: 1;
+  }
+
+  .lightbox-prev:hover {
+    opacity: 1;
+  }
+
+  .lightbox-next:active {
+    opacity: 1;
+  }
+
+  .lightbox-next:hover {
+    opacity: 1;
   }
 }
