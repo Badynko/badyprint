@@ -37,6 +37,10 @@ header {
   border-bottom: 3px solid var(--black);
 }
 
+.post-name {
+  font-family: "Nunito", sans-serif;
+}
+
 .header-web {
   display: block;
   width: 100%;
@@ -91,7 +95,6 @@ main {
   color: darkblue;
   font-size: 2rem;
   padding-top: 1rem;
-  font-family: "Gupter", serif;
   text-transform: uppercase;
 
   text-align: center;
