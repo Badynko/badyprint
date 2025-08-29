@@ -471,6 +471,11 @@ footer {
     width: 95%;
     height: auto;
   }
+
+  .social img {
+    width: 30px;
+    height: auto;
+  }
 }
 
 /* mobilné menu defaultne skryté */
